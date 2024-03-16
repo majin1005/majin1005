@@ -50,3 +50,21 @@ a = b
 b = temp
 ```
 So keep that in mind for your exam.
+
+## Select Sort
+Use Linear Search to find the largest(or smallest) value in the unsorted part in the list.  
+Swap that to the first slot of the unsorted part of the list and continue that until all the item of the list is sorted.  
+
+Example:
+```python
+for i in range(len(N)):
+    max = i
+    for j in range(i+1, len(N)):
+        if N[j] > N[max]:
+            max = j
+    N[i], N[max] = N[max], N[i]
+```
+
+## Insert Sort
+Save the value of the first item of the unsorted part of the list.  
+Compare it to the item in the sorted part
