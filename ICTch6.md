@@ -11,7 +11,7 @@ CONS: Not Effective(require (N+1)/2 step in general)
 
 Example:
 ```python
-Def LinearSearch(target):
+def LinearSearch(N, target):
     for i in range(0,len(N)):
         if target == N[i]:
             return i
@@ -24,7 +24,7 @@ CONS: The list have to be sorted
 
 Example:
 ```python
-Def DivideSearch(target):
+def DivideSearch(N, target):
     start = 0
     end = len(N)-1
     while start <= end:
@@ -57,14 +57,31 @@ Swap that to the first slot of the unsorted part of the list and continue that u
 
 Example:
 ```python
-for i in range(len(N)):
-    max = i
-    for j in range(i+1, len(N)):
-        if N[j] > N[max]:
-            max = j
-    N[i], N[max] = N[max], N[i]
+def SelectSort(N):
+    for i in range(len(N)):
+        max = i
+        for j in range(i+1, len(N)):
+            if N[j] > N[max]:
+                max = j
+        N[i], N[max] = N[max], N[i]
 ```
 
 ## Insert Sort
 Save the value of the first item of the unsorted part of the list.  
+Compare it to item in the sorted part.  
+Find its position and insert it there.  
+
+Example:
+```python
+def InsertSort(N):
+    for i in range(1, len(N)):
+        key = N[i]
+        j = i - 1
+        while j >= 0 and key > N[j]:
+            N[j+1] = N[j]
+        N[j+1] = key
+```
+
+## Bubble Sort
+
 Compare it to the item in the sorted part
