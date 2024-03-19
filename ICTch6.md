@@ -38,7 +38,7 @@ def DivideSearch(N, target):
     return -1
 ```
 
-# Sorting Programme
+# Sorting Programme(with lower efficiency)
 Before introduce diffent sorting method and it's python programme, we have to talk about how to swap item in two variable
 
 ## Swap
@@ -84,4 +84,30 @@ def InsertSort(N):
 
 ## Bubble Sort
 
-Compare it to the item in the sorted part
+
+Example:
+```python
+for i in range(len(N)-1):
+    for j in range(len(N)-1-i):
+        if N[j] < N[j+1]:
+            N[j], N[j+1] = N[j+1], N[j]
+```
+
+# Sorting Programme(with lower efficiency)
+
+## Merge two or more List
+Example:
+```python
+def ListMerge(M, N, K):
+    i = 0
+    j = 0
+    for k in range(len(N)+len(M)):
+        if i < len(N) and (j == len(M) or N[i] < M[j]):
+            H[k] = N[i]
+            i += 1
+        else:
+            H[k] = M[j]
+            j += 1
+```
+
+##
