@@ -1,9 +1,16 @@
 # Command
 
 ## CREATE DATABASE <DatabaseName>
-## DROP DATABASE
-## DROP TABLE
+Used to create a databse with name **<DatabaseName>**
+
+## DROP DATABASE <DatabaseName>
+Used to delete a database named **<DatabaseName>**
+
+## DROP TABLE <TableName>
+Used to delete a table in selectd databese named **<TableName>**
+
 ## DELETE FROM <TableName>
+
 ## SHOW DATABASES
 ## USE <DatabaseName>
 ## CREATE TABLE <TableName> (<CloumnName> <CloumnType>)
